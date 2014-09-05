@@ -1,0 +1,30 @@
+.show-small-only {
+  @include respond-min($bp-medium) {
+    display: none !important;
+  }
+}
+
+.show-medium-down {
+  display: block !important;
+  @include respond-min($bp-large) {
+    display: none !important;
+  }
+}
+
+.show-medium-up {
+  display: none !important;
+  @include respond-min($bp-medium) {
+    display: block !important;
+  }
+}
+
+.show-large-only {
+  display: none !important;
+  @include respond-min($bp-large) {
+    display: block !important;
+  }
+}
+
+.is-hidden {
+  display: none;
+}

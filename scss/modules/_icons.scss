@@ -1,0 +1,32 @@
+
+.icons--arrow {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	font-weight: 700;
+	//font-size: 16px;
+	color: $color-light-blue;
+	display: inline-block;
+	margin-left: 5px;
+}
+
+.icons--arrow-down:after {
+	content: "↓";
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	font-weight: 700;
+	//font-size: 16px;
+	color: $color-light-blue;
+	display: inline-block;
+	margin-left: 5px;
+}
+
+.icons--arrow-up:after {
+	content: "↑";
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	font-weight: 700;
+	//font-size: 16px;
+	color: $color-light-blue;
+	display: inline-block;
+	margin-left: 5px;
+}
+
+
+

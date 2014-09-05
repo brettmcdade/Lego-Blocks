@@ -1,0 +1,69 @@
+
+.sg-pattern {
+	margin: 2em 0;
+}
+
+.sg-head {
+	@include m-rem(font-size, 1.25);
+	font-weight: 500;
+	border-bottom: 1px solid #ccc;
+	@include m-rem(padding, 1);
+}
+
+.sg-body {
+	@include m-rem(padding, 2, 1);
+}
+
+
+.sg-code-head {
+	@include m-rem(font-size, .875);
+}
+
+.sg-code {
+	clear: both;
+	background: #fafafa;
+	color: #222;
+	@include m-rem(padding, 1);
+	margin: 0;
+}
+
+.sg-code pre {
+	white-space: -moz-pre-line;
+	white-space: -pre-line;
+	white-space: -o-pre-line;
+	word-wrap: break-word;
+	white-space: pre-line;
+	border: 0;
+	padding: 0;
+	    -moz-tab-size: 4;
+    -o-tab-size:   4;
+    tab-size:      4;
+}
+
+.sg-code-html {
+	@include m-rem(font-size, .875);
+}
+
+.hljs {
+	padding: 0;
+	background: #fafafa;
+}
+
+
+
+/* Colors */
+.sg-colors {
+	margin: 0;
+	padding: 0;
+
+		li {
+			float: left;
+			list-style: none;
+		}
+
+		span {
+			width: 2em;
+			height: 4em;
+			display: block;
+		}
+}

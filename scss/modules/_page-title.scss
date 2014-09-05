@@ -1,0 +1,43 @@
+
+.page-title__bar {
+	.l-inner {
+		padding-top: 20px;
+		padding-bottom: 18px;
+		position: relative; // needed for .page-title__icon
+
+		@include respond-min($bp-medium) {
+			padding-top: 34px;
+			padding-bottom: 25px;
+		}
+
+		@include respond-min($bp-large) {
+			padding-left: 60px;
+			padding-right: 60px;
+		}
+	}
+}
+
+.page-title__headline {
+	margin: 0;
+	font-size: 32px;
+	line-height: 33px;
+	width: 100%;
+
+	@include respond-min($bp-medium) {
+		font-size: 38px;
+		width: 66.666666%;
+	}
+}
+
+.page-title__icon {
+	display: none;
+
+	@include respond-min($bp-large) {
+		display: block;
+		position: absolute;
+		top: 21px;
+		right: 60px;
+		width: 73px;
+		height: 73px;
+	}
+}

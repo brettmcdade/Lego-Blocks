@@ -1,0 +1,71 @@
+//------------------------------------*\
+//    $BUTTONS
+//------------------------------------*/
+
+.btn {
+  display: inline-block;
+  padding: 1em;
+  width: 100%;
+  max-width: 300px;
+  color: #fff;
+  background-color: #444;
+  font-size: 1em;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: #444;
+    }
+    &:active,
+    &.active {
+      outline: none;
+    }
+    &.btn-disabled, &.btn-disabled:hover,
+    &[disabled],
+    fieldset[disabled] & {
+      cursor: default !important;
+      background-color: #eaeaea !important;
+    }
+}
+
+/* Alternative Button */
+.btn-alt {
+  @extend .btn;
+  background-color: #bababa;
+  color: #444;
+
+  &:hover,
+  &:focus {
+    background-color: #444;
+  }
+}
+
+
+ 
+// Link buttons
+// -------------------------
+
+// Make a button look and behave like a link
+.btn-text {
+  color: #444;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    background-color: transparent;
+  }
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}

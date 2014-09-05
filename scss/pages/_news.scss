@@ -1,0 +1,121 @@
+.news-top-separator {
+    margin: 20px 0px 0px 0px;
+}
+.news-article {
+    margin-bottom: 50px;
+}
+.news-date {
+		color: #7c858a;
+		font-size: 12px;
+		font-weight: 700;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+        padding-bottom: 12px;
+}
+.news-bottom-line {
+		color: #7c858a;
+		font-size: 12px;
+		font-weight: 700;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		padding: 20px 0px;
+		border-top: 1px solid #e0e5e9;
+		border-bottom: 2px solid #e0e5e9;		
+		margin-top: 20px;
+		
+}
+.news-share-line {
+        vertical-align: middle;
+
+        display: block;
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid #e0e5e9;
+
+        @include respond-min($bp-medium) {
+            display: block;
+            border-top: none;
+            margin-top: 0px;
+            padding-top: 0px;
+            float: right;
+        }
+}
+
+.panel--news {
+    .panel__title {
+        margin: 0px;
+    }
+    .panel__intro {
+        margin: 0 0 5px 0;
+    }
+}
+
+.news-share-line img { 
+   vertical-align: middle;
+}
+
+.fullArticleLink {
+    font-size: 18px;
+	color: $color-light-blue;
+	text-decoration: underline;
+	text-decoration: none;
+}
+
+#panel--categories, #panel--archive {
+    display: none;
+    @include respond-min($bp-medium) {
+        display: block;
+    }    
+}
+
+
+
+.news-panel-link {
+	border-bottom: 1px solid #e0e5e9;
+	text-align: left;
+
+	&:last-child {
+		padding-bottom: 0;
+		border-bottom: none;
+	}
+
+	a {
+		color: $color-navy;
+		padding: 22px 20px 22px 0px;
+		display: block;
+		line-height: 20px;
+
+		span {
+		    color: $color-light-blue;
+		    margin-left: 5px;
+		}
+
+		@include respond-min($bp-medium) {
+			padding: 15px 0 15px 0px;
+			background-size: 27px 32px;
+			background-position: 0px 18px;
+		}
+		
+
+	}
+
+	@include respond-min($bp-medium) {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+
+
+
+.news--panel--name {
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 15px;
+}
+.news-panel-link2 a {
+    color: $color-light-blue;
+}
+.news--panel--phone {
+padding-bottom: 15px;
+}

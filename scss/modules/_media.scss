@@ -1,0 +1,47 @@
+
+.video__holder {
+	position: relative;
+	cursor: pointer;
+}
+
+.video__overlay {
+	background: #000;
+	width: 100%;
+	position: absolute;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 4;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)"; /* IE 8 */ 
+		opacity: .3;
+}
+
+.video__play-btn {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	opacity: .8;
+	@include transition(opacity, .3s, ease-in-out);
+
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.video_container {
+		background-color: #000;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+ 
+.video_container iframe,
+.video_container object,
+.video_container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

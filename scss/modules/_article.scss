@@ -1,0 +1,67 @@
+//------------------------------------*\
+//    $ARTICLES
+//------------------------------------*/
+
+.article {
+
+	margin-bottom: 20px;
+
+	p a {
+		color: $color-light-blue;
+	}
+	
+	p + h3, 
+	ul + h3, 
+	ol + h3 {
+		margin-top: 30px;
+
+		@include respond-min($bp-medium) {
+			margin-top: 50px;
+		}
+	}
+
+	ul + .btn {
+		margin-top: 20px;
+	}
+
+	p, li {
+		margin-bottom: 8px;
+		font-size: 18px;
+		line-height: 27px;
+
+		@include respond-min($bp-medium) {
+			font-size: 20px;
+			line-height: 30px;
+		}
+	}
+
+	p, ul, ol {
+		margin: 0 0 20px;
+	}
+
+	ul, ol {
+		padding: 0 0 0 20px;
+	}
+}
+
+
+.l-2col .article {
+	@include respond-min($bp-medium) {
+		padding-right: 50px;
+	}
+	@include respond-min($bp-large) {
+		.l-inner {
+			padding-left: 60px;
+		}
+	}
+}
+
+.l-1col .article {
+	@include respond-min($bp-large) {
+		.l-inner {
+			padding-left: 60px;
+			padding-right: 60px;
+		}
+	}
+}
+

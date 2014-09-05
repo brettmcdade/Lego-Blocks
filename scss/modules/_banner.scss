@@ -1,0 +1,304 @@
+//------------------------------------*\
+//    $BANNER
+//------------------------------------*/
+
+.banner {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.banner__card {
+	position: relative;
+}
+
+.banner__img-large {
+	@include respond-min($bp-medium) {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-position: 50% 0;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		@include old-ie {
+		  -ms-behavior: url(/backgroundsize.min.htc);
+		}
+		
+	}
+}
+
+.banner__img-small {
+	width: 100%;
+}
+
+.banner__row {
+	@include respond-min($bp-medium) {
+		max-width: $bp-siteMaxWidth;
+		margin: 0 auto;
+		position: relative;
+		height:  411px;
+	}
+}
+
+.banner__body {
+	@include respond-min($bp-medium) {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	@include respond-min($bp-large) {
+		left: 20px;
+	}
+}
+
+.banner__text-container {
+	@include respond-min($bp-medium) {
+		height: 100%;
+		display: table;
+	}
+}
+
+.banner__inner {
+	@include respond-min($bp-medium) {
+		padding: 30px 0;
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+
+.banner__box {
+	padding: 1em;
+	overflow: hidden;
+	text-align: center;
+
+	@include respond-min($bp-medium) {
+		padding: 1em 2em;
+		height: 100%;
+		text-align: left;
+		width: 430px;
+	}
+}
+
+.banner__title {
+	margin: 0;
+}
+
+
+
+
+/* Modifiers */
+
+// Banner hero image 
+.banner--hero {
+	margin-bottom: 50px;
+	@include respond-min($bp-medium) {
+		margin-bottom: 60px;
+	}
+
+	.banner__box {
+		padding: 35px 20px 50px;
+		background-color: $color-gl-navy;
+		color: #fff;
+		text-align: center;
+
+		@include respond-min($bp-medium) {
+			background-color: rgba(20,38,76,.95);
+			padding-left: 40px;
+			padding-right: 40px;
+			height: 348px;
+			text-align: left;
+		}
+	}
+
+	.banner__text {
+		color: #8f9fbf;
+		font-family: $global-font-family;
+		font-size: 18px;
+		line-height: 25px;
+		margin: 0;
+
+		@include respond-min($bp-medium) {
+			font-size: 20px;
+			line-height: 28px;
+		}
+	}
+
+	.banner__title {
+		padding: 0 20px;
+		margin: 0 0 15px;
+		line-height: 37px;
+
+		@include respond-min($bp-medium) {
+			margin-top: 10px;
+			padding: 0;
+			font-size: 38px;
+			line-height: 42px;
+		}
+	}
+}
+
+
+// Styling images in the Facility, Staff, and Cuisine tabs
+.banner--home-tabs {
+	@extend .banner;
+
+	.banner__row {
+		@include respond-min($bp-medium) {
+			height:  487px;
+		}
+	}
+
+	.banner__box {
+		padding: 50px 20px;
+		background-color: #fff;
+
+		p {
+			margin: 0 0 30px;
+		}
+
+		@include respond-min($bp-medium) {
+			padding: 38px 33px;
+			width: 353px;
+			height: 375px;
+			display: table-cell;
+			text-align: center;
+			vertical-align: middle;
+		}
+	}
+
+	.banner__inner {
+		@include respond-min($bp-medium) {
+			padding: 60px 0;
+		}
+	}
+
+	.banner__body {
+		@include respond-min($bp-medium) {
+			left: initial;
+			right: 40px;
+			width: auto;
+		}
+	}
+
+	.banner__title {
+		color: $color-gl-navy;
+		margin: 0 0 15px;
+	}
+
+	.banner__btn-constrained {
+	  max-width: 400px;
+	  margin-left: auto;
+	  margin-right: auto;
+	}
+
+	.banner__img-large {
+		@include respond-min($bp-medium) {
+
+			@include old-ie {
+			  position: absolute !important;
+			}
+		}
+	}
+	
+}
+
+
+// This is the split image section found in the middle of content. We use the banner module for the images styling
+.banner--image-split {
+	position: relative;
+	@include respond-min($bp-medium) {
+		height: 347px;
+	}
+
+	.banner__img-large {
+		@include respond-min($bp-medium) {
+			height: 347px;
+		}
+	}
+}
+
+
+.banner__left {
+	//width: 31.7%;
+	width: 68.3%;
+	background-position: 50%;
+}
+
+.banner__right {
+	@include respond-min($bp-large) {
+		width: 68.3%;
+		right: 0;
+		left: inherit;
+		//background-position: 10px 50%;
+		background-position: 0 50%;
+		border-left: 10px solid #fff;
+	}
+}
+
+
+
+.page--contact .banner--hero {
+	margin-bottom: 0;
+	
+	@include respond-min($bp-medium) {
+		margin-bottom: 60px;
+	}
+}
+
+/* Google Maps */
+.page--contact .banner__text-container {
+	z-index: 10;
+	position: relative;
+}
+
+.page--contact .banner__row {
+	margin-top: 164px;
+
+	@include respond-min($bp-small) {
+		margin-top: 245px;
+	}
+	@include respond-min($bp-smallish) {
+		margin-top: 327px;
+	}
+	@include respond-min($bp-medium) {
+		margin-top: 0;
+	}
+}
+
+#banner__img-googlemaps {
+	width: 100%;
+	height: 164px;
+	position: absolute !important;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	@include respond-min($bp-small) {
+		height: 245px;
+	}
+	@include respond-min($bp-smallish) {
+		height: 327px;
+	}
+	@include respond-min($bp-medium) {
+		height: 100%; 
+	  width: 100%; 
+	  position:absolute !important; 
+	  top: 0; 
+	  left: 0; 
+	  z-index: 0;
+	}	 
+} 
+
+.banner__content-constrained {
+	padding: 0 5%;
+}
+
+/* overrides -- keep at the bottom of the page */
+.banner--no-margin {
+	margin: 0;
+}

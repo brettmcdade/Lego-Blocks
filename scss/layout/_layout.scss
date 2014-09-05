@@ -1,0 +1,139 @@
+//------------------------------------*\
+//    $LAYOUT
+//------------------------------------*/
+
+.l-inner {
+	padding-left: 20px;
+	padding-right: 20px;
+	overflow: hidden;
+
+	@include respond-min($bp-medium) {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+
+	@include respond-min($bp-large) {
+		padding-left: 35px;
+		padding-right: 35px;
+	}
+}
+
+.layout-page-wrap {
+	padding-top: 50px;
+  position: relative;
+  -moz-transition: -moz-transform .3s ease;
+    -o-transition: -o-transform .3s ease;
+      -webkit-transition: -webkit-transform .3s ease;
+        transition: transform .3s ease;
+
+   @include respond-min($bp-medium) {
+   		padding-top: 77px;
+   }
+}
+
+
+.l-1col, .l-2col {
+	//padding-top: 50px;
+
+	@include respond-min($bp-medium) {
+		//padding-top: 60px;
+	}
+}
+
+.l-2col {
+
+	@include respond-min($bp-medium) {
+		.l-main {
+			width: 66.66666666666667%;
+			margin-top: 20px;
+			float: left;
+		}
+		.l-sidebar {
+			width: 33.33333333333333%;;
+			float: left;
+			max-width: 235px;
+		}
+
+		.article .l-inner {
+			padding-right: 0;
+		}
+	}
+
+	@include respond-min($bp-large) {
+		.l-main {
+			width: 71.57894736842105%;
+			}
+		.l-sidebar {
+			width: 28.42105263157895%;
+		}
+	}
+}
+
+.l-main {
+	//margin-bottom: 10px;
+
+	@include respond-min($bp-medium) {
+		//margin-bottom: 60px;
+	}
+}
+
+.l-sidebar {
+	margin-top: 20px;
+
+	@include respond-min($bp-medium) {
+		margin-top: 0;
+		margin-bottom: 20px;
+	}
+}
+
+
+
+
+/* page specific layouts */
+
+.page--amenities-overview {
+
+	.l-1col {
+		padding-top: 0;
+	}
+
+	.l-main {
+		margin-bottom: 0;
+	}
+
+	.l-inner {
+		@include respond-min($bp-large) {
+			padding-left: 60px;
+			padding-right: 60px;
+		}
+	}
+
+	.form--schedule-tour {
+    margin-top: 0;
+  }
+}
+
+
+.page--contact {
+
+	@include respond-min($bp-medium) {
+		.l-main {
+			width: 69.01041666666667%;
+		}
+		.l-sidebar {
+			width: 30.98958333333333%;
+			max-width: 215px;
+		}
+	}
+
+	@include respond-min($bp-large) {
+		.l-main {
+			width: 71.57894736842105%;
+			}
+		.l-sidebar {
+			width: 28.42105263157895%;
+			max-width: 235px;
+		}
+	}
+
+}

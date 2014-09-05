@@ -1,0 +1,125 @@
+.banner--bio {
+        @include respond-min($bp-medium) {
+            height: 200px !important;
+            margin-top: 100px;
+        }
+}
+.staff-hr {
+    display: none;
+    @include respond-min($bp-medium) {
+        display: block;
+    }        
+}
+
+// Staff Overview
+.section-block--staff {
+	@include respond-min($bp-medium) {
+		margin-bottom: 10px;
+	}
+	
+	
+	.photo-box {
+	    float: none;
+	    display: block;
+
+	    margin: 20px 0;	    
+        width: 100%;
+        
+        @include respond-min($bp-medium) {
+            max-width: 262px;
+            width: 31%;
+            float: left;
+            margin-right: 20px;
+        }
+        @include respond-min($bp-large) {
+            width: 262px;
+        }
+        
+        .image-container {
+            width: 100%;
+            background: $color-light-blue;
+            padding: 0;
+            margin: 0;
+            cursor: pointer;
+            display: block;
+            
+            .image-container-link {
+                position: absolute;
+                margin-top: 0px;
+                margin-left: 0px;
+                color: #fff;
+                display: none;
+                padding: 0;
+            }
+
+        }
+        
+        
+	    img {
+            width: 100%;
+	    }
+
+	    
+	    h3 {
+	        font-size: 22px;
+	        margin: 20px 0 5px 0;
+	        padding:0;
+	        text-align: center;
+            @include respond-min($bp-medium) {
+    	        text-align: left;
+            }	        
+	    }
+	    .staff-title {
+	        font-size: 16px;
+	        text-align: center;	        
+            @include respond-min($bp-medium) {
+    	        text-align: left;
+            }	        
+	        
+	    }
+	    
+	    
+	}
+    .third-element {
+        margin-right: 0px;
+    }
+    
+    
+    .panel--quote {
+        @extend .panel--resources;
+        text-align: center;
+        padding: 10px 20px;
+        .bio-quote1 {
+            width: 42px;
+            display: block;
+            margin: 10px auto;
+        }
+        .bio-quote2 {
+            width: 42px;
+            display: block;        
+            margin: auto;
+            margin: 10px auto;
+        }
+
+        
+        @include respond-min($bp-medium) {        
+            padding-bottom: 40px;
+            .bio-quote1 {
+                width: 42px;
+                display: block;
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+            .bio-quote2 {
+                width: 42px;
+                display: block;        
+                float:right;
+                margin:10px 0;
+            }
+
+
+        }
+    }
+    
+	
+}

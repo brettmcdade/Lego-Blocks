@@ -1,0 +1,338 @@
+
+//------------------------------------*\
+//    $ Active States on Primary Nav
+//------------------------------------*/
+.page--services .parent-services,
+.page--amenities-overview .parent-amenities,
+.page--facility .parent-amenities,
+.page--cuisine .parent-amenities,
+.page--gallery .parent-amenities,
+.page--staff .parent-staff,
+.page--about .parent-about,
+.page--news .parent-news {
+	margin-top: -6px;
+	padding-top: 25px;
+	border-top: 6px solid #7c858a;
+	color: $color-light-blue;
+}
+
+
+//------------------------------------*\
+//    $Page Services Overview
+//------------------------------------*/
+
+.page--services-overview .center {
+	text-align: center;
+	@include respond-min($bp-large) {
+		text-align: left;
+	}
+}
+
+.icon-list__container {
+	margin: 0 -20px;
+
+	@include respond-min($bp-medium) {
+		margin: 0;
+	}
+
+	@include respond-min($bp-large) {
+		margin: 0 -10px;
+	}
+}
+
+ul.icon-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	@include respond-min($bp-medium) {
+		padding: 0 60px;
+	}
+
+	@include respond-min($bp-large) {
+		padding: 0;
+	}
+
+	li {
+		margin: 0;
+		position: relative;
+
+		@include respond-min($bp-medium) {
+			margin-bottom: 20px;
+			width: 50%;
+			float: left;
+			padding: 0 10px;
+		}
+
+		@include respond-min($bp-large) {
+			width: 33.33333333333333%;
+		}
+
+	}
+}
+
+.icon-list__wrap {
+	padding: 40px 0;
+	background-color: #f5f8fc; 
+	display: block;
+	border-bottom: 1px solid #e0e5e9;
+	-webkit-transition: 0;
+  	transition: 0;
+
+	@include respond-min($bp-medium) {
+		border-radius: 4px;
+		border: 1px solid #e0e5e9;
+		border-bottom-width: 4px;
+	}
+
+	@include respond-min($bp-large) {
+		height: 135px;
+	}
+}
+
+.icon-list__icon {
+	position: absolute;
+	top: 30px;
+	left: 20px;
+	color: #14264c;
+	font-size: 68px;
+
+	@include respond-min($bp-medium) {
+		left: 25px;
+		top: 37px;
+		font-size: 58px;
+	}
+}
+
+.icon-list__item {
+	position: relative;
+	margin: 0;
+	padding-left: 110px;
+	width: 130px;
+
+	@include respond-min($bp-medium) {
+		padding-left: 90px;
+		padding-right: 25px;
+		width: 100%;
+		text-align: left;
+	}
+
+	@include respond-min($bp-large) {
+		padding-right: 35px;
+	}
+}
+
+.icon-list__item-title {
+	font-family: "adelle-n4", "adelle", serif;
+	font-size: 19px;
+	font-weight: 400;
+	color: #182028;
+
+	@include respond-min($bp-medium) {
+		font-size: 20px;
+		line-height: 24px;
+	}
+}
+
+.icon-list__text {
+	display: none;
+	font-family: $global-font-family;
+	font-size: 16px;
+	line-height: 20px;
+	visibility:hidden;
+
+	@include respond-min($bp-large) {
+		display: block;
+		position: absolute;
+		top: 25px;
+		left: 102px;
+		width: 158px;
+	}
+}
+
+.icon-list__text .more {
+	display: block;
+	margin-top: 5px;
+}
+
+.outer-container {
+	display: table;
+	height: 50px;
+	overflow: hidden;
+	width: 100%;
+
+	@include respond-min($bp-medium) {
+		height: 55px;
+	}
+
+}
+
+.inner-container {
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+
+	&:after {
+		content: "→";
+		font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+		font-weight: 700;
+		font-size: 42px;
+		color: $color-light-blue;
+		position: absolute;
+		right: 15px;
+		top: 0;
+
+		@include respond-min($bp-medium) {
+			display: none;
+		}
+	}
+}
+
+/*
+.icon-list__wrap,
+.icon-list__icon,
+.icon-list__item-title {
+	-webkit-transition: 0.25s;
+  transition: 0.25s;
+ }
+*/
+
+.toggle-service:hover {
+	background-color: #14264c;
+	border-color: #0d1933;
+
+	.icon-list__icon, 
+	.icon-list__text {
+		color: #fff;
+	}
+
+	.icon-list__text {
+		visibility: visible !important;
+	} 
+
+	.icon-list__item-title {
+		color: #fff;
+		display: block !important;
+		@include respond-min($bp-large) {
+			display: none !important;
+		}
+	}
+}
+
+//------------------------------------*\
+//    $Page Terms, Page Privacy
+//------------------------------------*/
+.page--terms,
+.page--privacy {
+
+	.section-block {
+		padding: 0 0 40px;
+		@include respond-min($bp-medium) {
+			padding: 0 0 60px;
+		}
+	}
+
+	.section-block__text {
+		border-top: 1px solid #e0e5e9;
+		padding-top: 30px;
+	}
+
+	.section-block h3 {
+		color: #182028;
+		font-size: 24px;
+		line-height: 30px;
+	}
+
+	.section-block p {
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+	.section-block ul {
+		padding: 0 0 0 23px;
+	}
+
+	.section-block li {
+		margin-bottom: 30px;
+		font-size: 16px;
+		line-height: 24px;
+	}
+}
+
+
+
+//------------------------------------*\
+//    $Page-404
+//------------------------------------*/
+.page--404 {
+
+	.banner__img-large {
+		background-position: 50% 0;
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.banner__body {
+		left: 0;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+	}
+
+	.banner__row {
+			height: 482px;
+		@include respond-min($bp-medium) {
+			height: 787px;
+		}
+	}
+
+	.banner--hero .banner__box {
+		text-align: center;
+		height: auto;
+
+		@include respond-min($bp-medium) {
+			width: 500px;
+			padding-left: 70px;
+			padding-right: 70px;
+		}
+	}
+
+	.banner__text-container {
+		display: block;
+		height: 100%;
+	}
+
+	.banner__inner {
+		display: block;
+		padding-top: 105px;
+		padding-left: 6.25%;
+		padding-right: 6.25%;
+
+		@include respond-min($bp-medium) {
+			padding-top: 150px;
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	.banner--hero .banner__box {
+		margin: 0 auto;
+	}
+
+	.banner--hero .banner__text {
+		color: #fff;
+	}
+
+	.banner--hero .banner__title {
+		margin-bottom: 20px;
+	}
+
+}

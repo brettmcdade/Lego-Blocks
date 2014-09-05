@@ -1,0 +1,150 @@
+// Grid
+
+.wrapper {
+	@include old-ie {
+		width: $unit-width;
+	}
+}
+
+.group, .lastGroup{
+	overflow:hidden;
+	-moz-background-clip:padding-box !important;
+	-webkit-background-clip:padding-box !important;
+	background-clip:padding-box !important;
+	float: left;
+}
+
+.lastGroup{
+	float:none;
+	width:auto;
+}
+
+.row {
+	max-width: $unit-width;
+	margin: 0 auto;
+}
+
+.row, .lastColumn {
+	overflow: hidden;
+	*overflow: visible;
+	*zoom:1;
+}
+
+.row:before, .row:after {
+	content: "";
+	display: table;
+}
+.row:after {
+	clear: both;
+}
+
+
+
+// Set Gutters
+
+.column { float: left; }
+.column-right { float: right; }
+
+.column {
+	overflow: hidden;
+	-moz-background-clip: padding-box !important;
+	-webkit-background-clip: padding-box !important;
+	background-clip: padding-box !important;
+}
+
+.lastColumn {
+	overflow: hidden;
+	-moz-background-clip: padding-box !important;
+	-webkit-background-clip: padding-box !important;
+	background-clip: padding-box !important;
+	float: none;
+	width: auto;
+}
+
+
+// Mobile first styles 
+
+.full-width { width: 100%; }
+.size1of2 { width: 100%; }
+.size2of2 { width: 100%; }
+
+.size1of3 { width: 100%; }
+.size2of3 { width: 100%; }
+.size3of3 { width: 100%; }
+
+.size1of4 { width: 100%; }
+.size2of4 { width: 100%; }
+.size3of4 { width: 100%; }
+.size4of4 { width: 100%; }
+
+
+/* Styles for screens that are at least small sized */
+
+@include respond-min($bp-medium) {
+	.size1of2 { width: 50%; }
+	.size2of2 { width: 100%; }
+
+	.size1of3 { width: 33.33333333333333%; }
+	.size2of3 { width: 66.66666666666667%; }
+	.size3of3 { width: 100%; }
+
+	.size1of4 { width: 25%; }
+	.size2of4 { width: 50%; }
+	.size3of4 { width: 100%; }
+	.size4of4 { width: 100%; }
+}
+
+/* Styles for screens that are at least medium sized */
+@include respond-min($bp-large) {
+	.size1of2 { width: 50%; }
+	.size2of2 { width: 100%; }
+
+	.size1of3 { width: 33.33333333333333%; }
+	.size2of3 { width: 66.66666666666667%; }
+	.size3of3 { width: 100%; }
+
+	.size1of4 { width: 25%; }
+	.size2of4 { width: 50%; }
+	.size3of4 { width: 75%; }
+	.size4of4 { width: 100%; }
+}
+
+
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+.no-padding {
+	margin-left: -$column-gutter;
+	margin-right: -$column-gutter;
+
+	@include respond-min($bp-medium) {
+		padding-left: -$column-gutter-small;
+		padding-right: -$column-gutter-small;
+	}
+
+	@include respond-min($bp-large) {
+		padding-left: -$column-gutter-medium;
+		padding-right: -$column-gutter-medium;
+	}
+}
+
+
+.mtop {
+	margin-top: 10px;
+}
+
+.mtop60 {
+	margin-top: 60px;
+}
+
+.no-padding > div {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+
+
+
+.color-me-bad-1 {
+	background-color: #77B900;
+}

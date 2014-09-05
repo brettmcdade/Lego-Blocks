@@ -1,0 +1,121 @@
+//------------------------------------*\
+//    $BLOCK
+//------------------------------------*/
+
+.section-block {
+	@extend .article;
+
+	margin-bottom: 0;
+
+	padding: 45px 0 40px;
+
+	@include respond-min($bp-medium) {
+		padding: 60px 0 60px;
+	}
+}
+
+.section-block--last {
+	padding: 45px 0 40px;
+
+	@include respond-min($bp-medium) {
+		padding: 60px 0 90px;
+	}
+}
+
+.section-block .l-inner {
+	@include respond-min($bp-medium) {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	@include respond-min($bp-large) {
+		padding-left: 60px;
+		padding-right: 60px;
+	}		
+}
+
+
+.section-block--article + .section-block-hr {
+	display: none;
+
+	@include respond-min($bp-medium) {
+		display: block;
+	}
+}
+.section-block-hr {
+	@extend .row;
+
+	.l-inner {
+		@include respond-min($bp-medium) {
+			padding-left: 40px;
+			padding-right: 40px;
+		}	
+		@include respond-min($bp-large) {
+			padding-left: 60px;
+			padding-right: 60px;
+		}		
+	}
+}
+
+.section-block__title {
+	margin-bottom: 30px;
+	line-height: 30px;
+	text-align: center;
+
+	@include respond-min($bp-medium) {
+		margin-bottom: 40px;
+		text-align: left;
+	}	
+}
+
+
+.section-block--mission-statement {
+	padding: 50px 0 55px;
+	@include respond-min($bp-medium) {
+		padding: 100px 0 110px;
+	}	
+
+	.lead {
+		@include respond-min($bp-medium) {
+			padding-left: 7.246376811594203%;
+			padding-right: 7.246376811594203%;
+		}	
+	}
+}
+
+
+
+/* 
+	Page Specifics 
+	*/
+.section-block--amenities {
+
+	// Nest these block elements because so far the are exclusive to Amenities page. If this changes, we can bring out.
+	.section-block__title {
+		@include respond-min($bp-large) {
+			padding-right: 70px;
+			margin-top: 5px;
+			width: 26%;
+			max-width: 215px;
+		}
+	}
+
+	.section-block__text {
+		max-width: 640px;
+		@include respond-min($bp-medium) {
+			width: 74%;
+		}
+	}
+}
+
+.section-block--amenities-last {
+	margin-bottom: 0;
+}
+
+
+// Services Sub-pages
+.section-block--services,
+.section-block--contact {
+	@include respond-min($bp-medium) {
+		margin-bottom: 55px;
+	}
+}

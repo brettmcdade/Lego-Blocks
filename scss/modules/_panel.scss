@@ -1,0 +1,211 @@
+.panel {
+	margin-bottom: 10px;
+	padding: 40px 20px;
+	background-color: #f5f7fa;
+	text-align: center;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	@include respond-min($bp-medium) {
+		padding: 20px 20px 30px;
+		text-align: left;
+	}
+}
+
+.panel__intro {
+	margin: 0 0 15px;
+}
+
+.panel__title {
+	margin: 0 0 10px;
+	line-height: 31px;
+}
+
+
+
+// items in panel 
+
+.panel--resources {
+	@extend .panel;
+	padding-bottom: 20px;
+}
+.panel--news {
+	@extend .panel;
+	padding-bottom: 20px;
+}
+
+.panel--questions {
+	@extend .panel;
+
+	.btn {
+		display: block;
+		text-align: center;
+		margin: 0 auto;
+
+		@include respond-min($bp-medium) {
+			padding: 0;
+			background: none;
+			border: none;
+			color: $color-light-blue;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 18px;
+			text-align: left;
+			text-transform: none;
+		}
+	}
+
+	.btn + .btn {
+		margin-top: 20px;
+
+		@include respond-min($bp-medium) {
+			margin-top: 6px;
+		}
+	}
+
+	.icons--arrow {
+		@include respond-min($bp-medium) {
+			color: $color-light-blue;
+		}
+	}
+}
+
+.panel--contact {
+	@extend .panel;
+
+	.icons--arrow {
+		@include respond-min($bp-medium) {
+			color: $color-light-blue;
+		}
+	}
+}
+
+.panel--contact-mobile {
+	@extend .panel--contact;
+	margin-bottom: 40px;
+}
+
+
+.file-download {
+	margin-left: -20px;
+	margin-right: -20px;
+	border-bottom: 1px solid #e0e5e9;
+	text-align: left;
+
+	&:last-child {
+		padding-bottom: 0;
+		border-bottom: none;
+	}
+
+	a {
+		color: $color-light-blue;
+		padding: 22px 20px 22px 70px;
+		display: block;
+		line-height: 20px;
+		background: url("../images/icons/svg/icon-pdf.svg") no-repeat;
+		background-position: 25px 18px;
+	  background-size: 25px 30px;
+
+		@include respond-min($bp-medium) {
+			padding: 15px 0 15px 50px;
+			background-size: 27px 32px;
+			background-position: 0px 18px;
+		}
+
+		@include old-ie {
+	    background: url('../images/icons/png/icon-pdf.png') 0px 18px no-repeat;
+	  }
+	}
+
+	@include respond-min($bp-medium) {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+
+
+.panel__section-title {
+	margin: 0 -20px 0;
+	text-align: left;
+	font-family: $global-font-family;
+	font-size: 13px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #7C858A;
+	padding: 15px 20px 10px;
+	border-bottom: 1px solid #e0e5e9;
+
+	@include respond-min($bp-medium) {
+		margin: 0;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.panel__list {
+	margin: 0 -20px 0;
+	padding: 0;
+	list-style: none;
+
+	li {
+		border-bottom: 1px solid #e0e5e9;
+		text-align: left;
+		position: relative;
+		padding-left: 14px;
+
+		&:last-child {
+			padding-bottom: 0;
+			border-bottom: none;
+		}
+	}
+
+	a {
+		color: #333;
+		padding: 22px 20px 22px;
+		display: block;
+		line-height: 20px;
+
+		@include respond-min($bp-medium) {
+			padding: 15px 0 15px 0;
+		}
+	}
+
+	@include respond-min($bp-medium) {
+		margin: 0;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.panel__list li:before {
+	content: "•";
+	position: absolute;
+	top: 21px;
+	left: 19px;
+	color: #333;
+
+	@include respond-min($bp-medium) {
+		top: 13px;
+		left: 0;
+	}
+}
+
+.panel__list:last-of-type { // only add border to last panel list. * doesn't work in IE8
+	border-bottom: 1px solid #e0e5e9;
+}
+
+.panel__section {
+	margin-bottom: 20px;
+	a {
+		color: $color-light-blue;
+	}
+}
+
+.panel__section:last-of-type {
+	margin-bottom: 0;
+}
+

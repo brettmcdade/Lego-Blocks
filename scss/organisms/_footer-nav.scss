@@ -1,0 +1,295 @@
+.footer {
+	background-color: #0d1933;
+}
+
+.footer-primary-links {
+	padding: 93px 0 8px;
+	border-bottom: 1px solid #242f46;
+	position: relative;
+
+	@include respond-min($bp-medium) {
+		padding-top: 45px;
+		padding-bottom: 40px;
+	}
+
+	a {
+		color: #fff;
+	}
+
+	.l-inner {
+		@include respond-min($bp-large) {
+			padding-left: 60px;
+			padding-right: 60px;
+		}
+	}
+}
+
+.footer-primary-links h4 {
+	margin: 0 0 30px;
+	color: #fff;
+	font-family: $global-font-family;
+	font-size: 13px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.footer-primary-links {
+	ul {
+		margin: 0;
+	  padding: 0;
+		list-style: none;
+	}
+
+	li {
+		font-size: 13px;
+		text-align: center;
+
+		@include respond-min($bp-medium) {
+			margin-bottom: 7px;
+			line-height: 20px;
+			text-align: left;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	a {
+		color: $color-light-purple;
+	}
+}
+
+
+.footer-primary-links .col2-2 {
+	font-weight: 700;
+	text-transform: uppercase;
+
+	-webkit-column-count: 2;
+  -webkit-column-gap:   20px;  
+  -moz-column-count:    2;
+  -moz-column-gap:      20px;
+  column-count:         2;
+  column-gap:           20px;
+
+  @include respond-min($bp-medium) {
+  	margin-top: 30px;
+  	margin-bottom: 7px;
+
+  	-webkit-column-count: auto;
+	  -webkit-column-gap:   0;  
+	  -moz-column-count:    auto;
+	  -moz-column-gap:      0;
+	  column-count:         auto;
+	  column-gap:           0;
+  }
+
+  a {
+  	color: #fff;
+  }
+
+  li {
+  	margin-bottom: 20px;
+
+  	@include respond-min($bp-medium) {
+  		margin-bottom: 7px;
+  	}
+  }
+}
+
+
+.footer-primary-links {
+	.col2 {
+		width: 100%;
+	}
+
+	@include respond-min($bp-medium) {
+
+		.column {
+			padding-right: 20px;
+		}
+
+		.col1,
+		.col2 {
+			width: 25%;
+		}
+
+		.col3 {
+			width: 35%;
+		}
+
+		.col4 {
+			width: 15%;
+		}
+	}
+}
+
+
+.footer-primary-links__social {
+	width: 100%;
+
+	overflow: hidden;
+	position: absolute;
+	background-color: $color-gl-navy;
+	padding-top: 20px;
+	padding: 15px 20px 0px;
+	top: 0;
+	left: 0;
+
+	@include respond-min($bp-medium) {
+		float: right;
+		padding: 0;
+		position: relative;
+		background-color: transparent;
+	}
+}
+
+.footer-primary-links__social li {
+	margin-bottom: 17px;
+	width: 33.33333%;
+	float: left;
+
+	@include respond-min($bp-medium) {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+}
+
+.footer-primary-links__social .icon--social {
+	width: 35px;
+	margin-right: 9px;
+}
+
+.footer-primary-links__social span {
+	display: none;
+
+	@include respond-min($bp-medium) {
+		display: inline-block;
+		margin-top: 12px;
+	}
+}
+
+
+
+
+
+
+.footer-secondary-links {
+	color: #fff;
+	text-align: center;
+	padding: 25px 0 6px;
+
+	ul {
+		margin: 0;
+	  padding: 0;
+		list-style: none;
+	}
+
+	a {
+		color: #69748c;
+	}
+
+	@include respond-min($bp-medium) {
+		padding-bottom: 25px;
+	}
+
+	.l-inner {
+		@include respond-min($bp-large) {
+			padding-left: 60px;
+			padding-right: 60px;
+		}
+	}
+}
+
+
+.footer-secondary-links__links {
+	overflow: hidden;
+
+  -webkit-column-count: 2;
+  -webkit-column-gap:   20px;  
+  -moz-column-count:    2;
+  -moz-column-gap:      20px;
+  column-count:         2;
+  column-gap:           20px;
+
+  @include respond-min($bp-medium) {
+  	-webkit-column-count: auto;
+	  -webkit-column-gap:   0;  
+	  -moz-column-count:    auto;
+	  -moz-column-gap:      0;
+	  column-count:         auto;
+	  column-gap:           0;
+  }
+
+  @include respond-min($bp-large) {
+		margin-top: 4px;
+	}
+}
+
+.footer-secondary-links__links li {
+	margin-bottom: 18px;
+	width: 100%;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 16px;
+	text-align: center;
+
+	@include respond-min($bp-medium) {
+		margin-bottom: 10px;
+		padding-left: 0;
+		padding-right: 15px;
+		float: left;
+		font-size: 11px;
+		text-align: left;
+		width: auto;	
+	}
+
+	@include respond-min($bp-large) {
+		font-size: 10px;
+	}
+
+	&:last-child {
+		@include respond-min($bp-medium) {
+			padding-right: 0;
+		}
+	}
+}
+
+.copyright {
+	padding: 20px 0 25px;
+	margin-top: 12px;
+	border-top: 1px solid #242f46; 
+
+	@include respond-min($bp-medium) {
+		padding-top: 0;
+		margin-top: 0;
+		border:none;
+		float: left;
+		font-size: 14px;
+		border: none;
+		margin-right: 90px;
+	}
+	@include respond-min($bp-large) {
+		margin-right: 44px;
+	}
+}
+
+
+
+
+.recent-news__item {
+	margin-bottom: 20px;
+}
+
+.recent-news__date {
+	color: $color-light-purple;
+	font-size: 11px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.recent-news__title a {
+	color: #fff;
+	font-size: 15px;
+	line-height: 20px;
+}

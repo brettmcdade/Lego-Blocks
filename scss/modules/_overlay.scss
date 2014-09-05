@@ -1,0 +1,115 @@
+/* 
+  Overlay 
+*/
+.toggle-modal {
+  cursor: pointer;
+}
+html, .overlay-on {
+  min-height: 100%;
+}
+
+.overlay-on {
+  position: relative;
+}
+
+.overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2000;
+  background-color: rgba(0,0,0,0.7); /*dim the background*/
+
+  @include old-ie {
+    background: url('../images/overlay.png') repeat transparent;
+  }
+}
+.centerContainer {
+  position: relative;
+}
+.modal {
+  z-index: 2001;
+  overflow: auto;
+  margin: auto;
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+
+  width: 100%;
+  height: auto;
+  min-width: 200px;
+  max-width: 660px;
+  padding: 40px 10px;
+}
+
+.modal__header {
+  position: relative;
+
+  .page-title__bar {
+    border-bottom: 1px solid #e0e5e9;
+    padding: 40px 0 20px;
+  }
+}
+
+.modal--close {
+  z-index: 2005;
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  color: #0d1933;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  @include respond-min($bp-medium) {
+    right: 30px;
+    top: 20px;
+  }
+}
+
+.modal__wrap {
+  padding: 0 10px;
+  position: relative;
+  border-top: 9px solid #14264c;
+  background-color: #fff;
+
+  @include respond-min($bp-small) {
+    padding: 0 30px;
+  }
+}
+
+.modal__content {
+  background-color: #fff;
+  padding: 25px 0 20px;
+  overflow: hidden;
+}
+
+
+
+.modal .column,
+.modal .lastColumn {
+  max-width: 100%;
+  @include respond-min($bp-medium) {
+    max-width: 280px;
+  }
+}
+
+.modal .lastColumn {
+  float: right;
+}
+
+.modal .textarea textarea {
+  min-height: 250px;
+}
+
+.modal .page-title__headline {
+  font-size: 28px;
+  line-height: 30px;
+}
+
+.form__container--modal {
+  position: relative;
+  margin-bottom: 24px;
+}
